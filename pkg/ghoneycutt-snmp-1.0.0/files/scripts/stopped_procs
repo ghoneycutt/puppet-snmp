@@ -1,0 +1,16 @@
+#!/bin/bash
+# This file is being maintained by Puppet.
+# DO NOT EDIT
+
+# 5 Dec 2007 - Garrett Honeycutt - gh@garretthoneycutt.com
+#
+# released under GPL
+#
+# returns number of stopped/traced processes running
+#
+# note: the 'sched' process is always in state T, so on Solaris this should
+# always return 1 and under linux this should always return 0
+
+stoppedProcsAmount=`/usr/local/bin/check_procs -s T | /usr/bin/awk '{print $3}'`
+echo $stoppedProcsAmount
+exit $stoppedProcsAmount

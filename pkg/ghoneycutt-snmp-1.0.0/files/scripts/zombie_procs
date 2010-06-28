@@ -1,0 +1,9 @@
+#!/bin/bash
+# This file is being maintained by Puppet.
+# DO NOT EDIT
+
+# returns number of zombie processes running
+
+zombieProcsAmount=`/usr/local/bin/check_procs -s Z | /usr/bin/awk '{print $3}'`
+echo $zombieProcsAmount
+exit $zombieProcsAmount

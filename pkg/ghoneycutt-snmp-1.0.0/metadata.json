@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "dependencies": [
+    {
+      "version_requirement": ">= 1.0.0",
+      "name": "ghoneycutt/lsbprovider"
+    }
+  ],
+  "name": "ghoneycutt-snmp",
+  "checksums": {
+    "templates/snmpd.conf.erb": "9dce86b17b9e4de7dfaf04eafeffa40a",
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "files/scripts/postfix_procs": "6da078317b0acdad7d72b8eee6b956af",
+    "README": "f1ca34a4b952c79c97e4dfcab22c645e",
+    "files/scripts/zombie_procs": "df67d40c7faf6215619298aa39f2c6fa",
+    "files/scripts/stopped_procs": "41ec6392ee6a75f3f94f583198354e23",
+    "tests/init.pp": "27ab1c2c08d9d088d84e6927d906c169",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
+    "Modulefile": "2a54c23fe1b7ce292d26e6a906a9e09e",
+    "manifests/init.pp": "f7d3c02431cc4b169ae155de36a55a7e"
+  },
+  "types": [
+
+  ]
+}

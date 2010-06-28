@@ -1,0 +1,6 @@
+snmp
+
+Released 20100628 - Garrett Honeycutt - GPLv2
+
+This is the snmp module for managing snmp clients. The given template
+is a good starting point, though you will need to modify the network locations.

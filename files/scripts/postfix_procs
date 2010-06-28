@@ -1,0 +1,16 @@
+#!/bin/bash
+# This file is being maintained by Puppet.
+# DO NOT EDIT
+
+# 14 Dec 2007 - Garrett Honeycutt - gh@garretthoneycutt.com
+#
+# released under GPL
+#
+# returns number of 'master' processes running
+#
+# there should be one process if postfix is operating correctly
+#
+
+masterProcsAmount=`/usr/local/bin/check_procs -C master -c 1:1 | /usr/bin/awk '{print $3}'`
+echo $masterProcsAmount
+exit $masterProcsAmount

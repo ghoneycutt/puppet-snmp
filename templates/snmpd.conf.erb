@@ -1,0 +1,53 @@
+# This file is being maintained by Puppet.
+# DO NOT EDIT
+
+###############################################################################
+# Access Control
+###############################################################################
+
+# Sources
+#               sec.name        source                  community
+com2sec         local           localhost               public
+com2sec         <%= lsbProvider %>  localhost              <%= lsbProvider %>
+com2sec         <%= lsbProvider %>  10.1.0.0/16            <%= lsbProvider %>
+
+# Security mappings
+group MyROGroup    v2c     local
+group MyROGroup    v2c     <%= lsbProvider %>
+
+# Views
+#               incl/excl subtree                                 mask
+view all        included  .1                                      80
+view system     included  .iso.org.dod.internet.mgmt.mib-2.system
+view sysView    included  system
+
+# Access levels
+#                context sec.model sec.level match  read   write  notif
+access MyROGroup ""      any       noauth    exact  all    none   none
+
+###############################################################################
+# System contact information
+###############################################################################
+
+syslocation     <%= snmpSyslocation %>
+syscontact      Root <<%= contactEmail %>>
+
+###############################################################################
+# disk checks
+###############################################################################
+
+# disk checks - "alarm" at 80% full
+disk    /               20%
+disk    /boot           20%
+disk    /data           20%
+
+###############################################################################
+# load average checks
+###############################################################################
+
+# Check for loads:
+load 10 10 10
+
+###############################################################################
+# Extensible sections.
+############################################################################### 
